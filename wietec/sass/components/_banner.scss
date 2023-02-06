@@ -1,0 +1,252 @@
+.banner {
+  overflow: hidden;
+  h2,
+  p {
+    color: $white;
+  }
+  h2 {
+    font-family: $font-montserrat;
+    font-weight: 900;
+    font-size: 34px;
+    text-transform: uppercase;
+    margin-bottom: 3px;
+    span {
+      color: $gray-light;
+    }
+  }
+  p {
+    font-size: 18px;
+    margin-bottom: 60px;
+  }
+  &-media {
+    display: flex;
+    gap: 45px;
+    margin-bottom: 45px;
+  }
+  &-image {
+    img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
+  }
+  &-col {
+    &:first-child {
+      padding-right: 0;
+    }
+    &:last-child {
+      padding-left: 0;
+    }
+  }
+  &-content {
+    padding: 55px 0;
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 100%;
+    }
+    &.left-content {
+      padding-right: 90px;
+      background-color: $blue;
+      &::after {
+        right: calc(100% - 1px);
+        background-color: $blue;
+      }
+      ul {
+        li {
+          a {
+            &:hover {
+              color: $blue;
+            }
+          }
+        }
+      }
+    }
+    &.right-content {
+      padding-left: 90px;
+      background-color: $green;
+      &::after {
+        left: calc(100% - 1px);
+        background-color: $green;
+      }
+      h2 {
+        span {
+          color: $blue-dark;
+        }
+      }
+      ul {
+        gap: 40px;
+        li {
+          text-align: center;
+          a {
+            flex: 1;
+            &:hover {
+              color: $green;
+            }
+          }
+          span {
+            color: $green;
+          }
+          i {
+            border-left: 14px solid $green;
+          }
+        }
+      }
+    }
+  }
+  ul {
+    display: flex;
+    gap: 5px;
+    li {
+      display: flex;
+      align-items: center;
+      flex: 1;
+      font-size: 22px;
+      font-weight: 700;
+      background-color: $white;
+      padding: 10px 13px;
+      text-transform: uppercase;
+      color: #989797;
+      span {
+        color: $blue;
+      }
+      a {
+        color: #989797;
+        text-decoration: none;
+        transition: color 0.3s ease-in-out;
+      }
+      i {
+        display: inline-block;
+        width: 0;
+        height: 0;
+        border-top: 12px solid transparent;
+        border-bottom: 12px solid transparent;
+        border-left: 14px solid $blue;
+        margin-right: 15px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1740px) {
+  .banner {
+    h2 {
+      font-size: 28px;
+    }
+  }
+}
+
+@media screen and (max-width: 1540px) {
+  .banner {
+    ul {
+      li {
+        font-size: 18px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .banner {
+    h2 {
+      font-size: 24px;
+    }
+    &-content {
+      &.left-content {
+        padding-right: 60px;
+      }
+      &.right-content {
+        padding-left: 60px;
+        ul {
+          gap: 30px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1240px) {
+  .banner {
+    h2 {
+      font-size: 20px;
+    }
+    p {
+      font-size: 16px;
+      margin-bottom: 40px;
+    }
+    ul {
+      li {
+        font-size: 14px;
+        i {
+          margin-right: 10px;
+        }
+      }
+    }
+    &-media {
+      gap: 30px;
+    }
+    &-content {
+      &.left-content {
+        padding-right: 40px;
+      }
+      &.right-content {
+        padding-left: 40px;
+        ul {
+          gap: 20px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .banner {
+    h2,
+    p {
+      text-align: center;
+    }
+    &-col {
+      &:first-child {
+        padding-right: 15px;
+      }
+      &:last-child {
+        padding-left: 15px;
+      }
+    }
+    &-content {
+      max-width: 550px;
+      margin: 0 auto;
+      position: static;
+      > * {
+        position: relative;
+        z-index: 2;
+      }
+      &.left-content {
+        padding: 40px 0;
+        &::after {
+          right: 0;
+        }
+      }
+      &.right-content {
+        padding: 40px 0;
+        &::after {
+          left: 0;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .banner {
+    ul {
+      display: block;
+      li + li {
+        margin-top: 15px;
+      }
+    }
+  }
+}

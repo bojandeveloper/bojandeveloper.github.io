@@ -1,0 +1,7 @@
+.container-fluid {
+  max-width: $base-width;
+  margin: 0 auto;
+  &.wide {
+    max-width: $wide-width;
+  }
+}

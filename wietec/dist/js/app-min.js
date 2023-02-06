@@ -1,0 +1,1 @@
+"use strict";const DOM={toggleBtn:document.querySelector(".toggle-button"),navEl:document.querySelector(".nav")},toggleNav=function(){DOM.toggleBtn.classList.toggle("open"),DOM.navEl.classList.toggle("active")};DOM.toggleBtn.addEventListener("click",toggleNav);

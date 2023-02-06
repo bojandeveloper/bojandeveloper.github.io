@@ -1,0 +1,25 @@
+body {
+  font: {
+    family: $font-family;
+    size: $font-base;
+    weight: 400;
+    style: normal;
+  }
+  line-height: $line-base;
+  color: $text-color;
+  background-color: $bg;
+  overflow-x: hidden;
+  &.prevent-scroll {
+    height: 100vh;
+  }
+}
+
+.main {
+  padding-top: 135px;
+}
+
+@media screen and (max-width: 1200px) {
+  .main {
+    padding-top: 108px;
+  }
+}
