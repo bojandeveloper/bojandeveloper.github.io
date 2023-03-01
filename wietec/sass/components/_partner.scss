@@ -1,0 +1,195 @@
+.partner {
+  position: relative;
+  overflow: hidden;
+  h2 {
+    font-family: $font-montserrat;
+    font-weight: 900;
+    font-size: 34px;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+    color: $blue;
+    span {
+      color: #1d1d1b;
+    }
+  }
+  p {
+    font-size: 20px;
+    color: #1d1d1b;
+  }
+  p + p {
+    margin-top: 15px;
+  }
+  ul {
+    display: flex;
+    gap: 30px;
+    li {
+      display: flex;
+      align-items: center;
+      font-size: 22px;
+      font-weight: 700;
+      background-color: #f2f1f1;
+      padding: 10px 13px;
+      text-transform: uppercase;
+      color: #989797;
+      flex-shrink: 0;
+      span {
+        color: $blue;
+      }
+      a {
+        color: #989797;
+        text-decoration: none;
+        transition: color 0.3s ease-in-out;
+        &:hover {
+          color: $blue;
+        }
+      }
+      i {
+        display: inline-block;
+        width: 0;
+        height: 0;
+        border-top: 12px solid transparent;
+        border-bottom: 12px solid transparent;
+        border-left: 14px solid $blue;
+        margin-right: 15px;
+      }
+      &.partner-logo {
+        background: none;
+        padding: 0;
+        flex-shrink: 1;
+        img {
+          max-height: 44px;
+          max-width: 100%;
+          width: auto;
+        }
+      }
+    }
+  }
+  &-col {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: calc(100vh - 97px);
+    padding: 90px 20px 50px 100px;
+  }
+  &-media {
+    display: none;
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: url("../../images/partner-bg.png") no-repeat center center /
+      cover;
+  }
+  &.partner-miyano {
+    &::before {
+      background: url("../../images/miyano.jpg") no-repeat center center / cover;
+    }
+  }
+  &.partner-pcm {
+    &::before {
+      background: url("../../images/pcm.jpg") no-repeat center center / cover;
+    }
+  }
+  &.partner-heimatec {
+    &::before {
+      background: url("../../images/heimatec.jpg") no-repeat center center /
+        cover;
+    }
+  }
+  &.partner-gebrauchtmaschinen {
+    &::before {
+      background: url("../../images/gebrauchtmaschinen.jpg") no-repeat center
+        center / cover;
+    }
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .partner {
+    &-col {
+      padding: 70px 20px 50px 60px;
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .partner {
+    h2 {
+      font-size: 28px;
+    }
+    p {
+      font-size: 18px;
+    }
+    ul {
+      gap: 20px;
+      li {
+        font-size: 18px;
+        &.partner-logo {
+          img {
+            max-height: 40px;
+          }
+        }
+      }
+    }
+    &-col {
+      padding: 50px 20px 30px 50px;
+    }
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .partner {
+    ul {
+      padding: 15px 20px 40px;
+    }
+    &-col {
+      padding: 0;
+      min-height: auto;
+    }
+    &-content {
+      padding: 40px 20px 15px;
+    }
+    &-media {
+      display: block;
+    }
+    &::before {
+      content: none;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .partner {
+    h2 {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+    p {
+      font-size: 16px;
+    }
+    ul {
+      li {
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .partner {
+    ul {
+      display: block;
+      li + li {
+        margin-top: 15px;
+      }
+    }
+  }
+}

@@ -23,6 +23,11 @@
       font-size: 17px;
       line-height: 1.4;
       color: $white;
+      a {
+        font-weight: 700;
+        text-decoration: none;
+        transition: color 0.3s ease-in-out;
+      }
     }
     p + p {
       margin-top: 30px;
@@ -38,6 +43,12 @@
         strong {
           color: $blue-dark;
         }
+        a {
+          color: $blue-dark;
+          &:hover {
+            color: $blue;
+          }
+        }
       }
     }
     &.right-box {
@@ -50,6 +61,12 @@
       p {
         strong {
           color: $blue-light;
+        }
+        a {
+          color: $blue-light;
+          &:hover {
+            color: $green;
+          }
         }
       }
     }
@@ -66,7 +83,7 @@
   }
 }
 
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 991px) {
   .services {
     &-col {
       &:first-child {

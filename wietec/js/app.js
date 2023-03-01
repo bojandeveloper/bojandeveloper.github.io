@@ -5,6 +5,7 @@
 const DOM = {
   toggleBtn: document.querySelector(".toggle-button"),
   navEl: document.querySelector(".nav"),
+  subMenu: document.querySelectorAll(".has-sub-menu > a"),
 };
 
 /////////////////////////////////////
@@ -17,3 +18,12 @@ const toggleNav = function () {
 /////////////////////////////////////
 // Events
 DOM.toggleBtn.addEventListener("click", toggleNav);
+
+DOM.subMenu.forEach((el) => {
+  el.addEventListener("click", function (e) {
+    e.preventDefault();
+    if (window.innerWidth < 993) {
+      el.parentElement.classList.toggle("active");
+    }
+  });
+});

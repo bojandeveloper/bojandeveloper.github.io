@@ -5,6 +5,7 @@
     font-size: 53px;
     font-weight: 900;
     color: $blue-darker;
+    margin-bottom: 5px;
   }
   h3 {
     font-family: $font-roboto;
@@ -18,9 +19,6 @@
   }
   p + p {
     margin-top: 25px;
-  }
-  &-title {
-    margin-bottom: 5px;
   }
   &-embed {
     position: relative;
@@ -38,9 +36,17 @@
       height: 100%;
     }
   }
+  &-image {
+    img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+      margin: 0 auto;
+    }
+  }
 }
 
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 991px) {
   .video {
     &-content {
       margin-bottom: 40px;

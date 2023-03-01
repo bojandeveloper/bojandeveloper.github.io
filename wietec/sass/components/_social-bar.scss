@@ -1,0 +1,30 @@
+.social-bar {
+  position: fixed;
+  top: 175px;
+  right: -2px;
+  width: 50px;
+  border: 2px solid $blue;
+  border-radius: 20px 0 0 20px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  background: #fff;
+  z-index: 999;
+  ul {
+    text-align: center;
+    padding: 20px 10px 15px;
+    li {
+      a {
+        color: $blue;
+        font-size: 24px;
+        transition: color 0.3s ease-in-out;
+        &:hover {
+          color: $blue-light;
+        }
+      }
+    }
+    li + li {
+      margin-top: 10px;
+      padding-top: 10px;
+      border-top: 1px solid $blue-darker;
+    }
+  }
+}

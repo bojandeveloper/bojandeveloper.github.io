@@ -1,0 +1,20 @@
+.external-page {
+  display: flex;
+  flex-direction: column;
+  padding: 60px 0 0;
+  min-height: calc(100vh - 97px);
+  .page-title {
+    margin-bottom: 40px;
+    padding: 0 20px;
+  }
+  iframe {
+    flex-grow: 1;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .external-page {
+    min-height: calc(100vh - 72px);
+  }
+}
