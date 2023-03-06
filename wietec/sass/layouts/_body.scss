@@ -9,6 +9,7 @@ body {
   color: $text-color;
   background-color: $bg;
   overflow-x: hidden;
+  scroll-behavior: smooth;
   &.prevent-scroll {
     height: 100vh;
   }
